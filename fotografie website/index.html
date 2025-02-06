@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgische Fotografie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Belgische Fotografie</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#albums">Albums</a></li>
+        <li><a href="#upload">Upload Foto's</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home sectie -->
+    <section id="home">
+      <div class="hero">
+        <h2>Ontdek prachtige momenten</h2>
+        <p>Vang de essentie van België in beeld.</p>
+      </div>
+    </section>
+
+    <!-- Albums sectie -->
+    <section id="albums">
+      <h2>Albums</h2>
+      <div id="albumGrid" class="album-grid">
+        <!-- Voorbeeld album items -->
+        <div class="album" data-album="album1">
+          <img src="https://via.placeholder.com/300x200.png?text=Album+1" alt="Album 1">
+          <h3>Album 1</h3>
+        </div>
+        <div class="album" data-album="album2">
+          <img src="https://via.placeholder.com/300x200.png?text=Album+2" alt="Album 2">
+          <h3>Album 2</h3>
+        </div>
+      </div>
+      <!-- Sectie om foto’s in een album te bekijken -->
+      <div id="albumPhotos" class="album-photos hidden">
+        <button id="backToAlbums">Terug naar albums</button>
+        <h2 id="albumTitle"></h2>
+        <div id="photosGrid" class="photos-grid">
+          <!-- Foto's worden hier dynamisch geladen -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload sectie -->
+    <section id="upload">
+      <h2>Upload je foto</h2>
+      <form id="uploadForm">
+        <label for="albumSelect">Kies een album:</label>
+        <select id="albumSelect">
+          <option value="album1">Album 1</option>
+          <option value="album2">Album 2</option>
+        </select>
+        <div id="dropZone" class="drop-zone">
+          <p>Sleep hier je foto of klik om te selecteren</p>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <button type="submit">Upload Foto</button>
+      </form>
+      <div id="uploadPreview" class="upload-preview"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Belgische Fotografie</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
